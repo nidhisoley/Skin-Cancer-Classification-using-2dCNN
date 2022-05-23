@@ -35,9 +35,7 @@ atlas of dermoscopy (book and cd-rom). 2000.
 
 From our initial testing, we found that working with this data set was extremely difficult. Because the data is highly imbalance, our models would only predict images as "NV" (the dominant class). Therefore, we set out to improve the performance by changing the data set. We tried making the data set binary, (either "NV" or "Other"), and we tried under sampling the data to fix the imbalance. The binary data did not perform well. The under sampled data on the other hand began to give promising results. After observing the confusion matrix we found that the model was doing well at distinguing classes 2 (NV) and 6 (VASC).
    
-$$\begin{bmatrix} 7 & 7 & 3 & 6 & 7 & 1 & 2 
-
-\\ 21 & 25 & 6 & 7 & 10 & 3 & 4 \\  0 & 0 &  5 & 4 & 2 & 10 & 0\\ 1 & 1 & 3 & 5 & 3 & 7 & 1 \\ 1 & 0 & 7 & 6 & 4 & 7 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 & 23\end{bmatrix}$$
+$$\begin{bmatrix} 7 & 7 & 3 & 6 & 7 & 1 & 2 \\\ 21 & 25 & 6 & 7 & 10 & 3 & 4 \\  0 & 0 &  5 & 4 & 2 & 10 & 0\\ 1 & 1 & 3 & 5 & 3 & 7 & 1 \\ 1 & 0 & 7 & 6 & 4 & 7 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 & 23\end{bmatrix}$$
                   
 For this reason, we also decided to make another data sample that splits the data into three categories. NV, VASC and OTHER. 
 
