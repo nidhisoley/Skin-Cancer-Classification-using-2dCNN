@@ -1,13 +1,13 @@
 # Deep Learning Models to Predict Skin Cancer
-- Problem Statement
+### - Problem Statement
 
 Skin Cancer is an extremely prevelent form of cancer. In the US, about 9,500 people in the US are diagnosed with skin cancer every day. When detected early, patients with skin cancer have an extremely high survival rate. Steps should be taken to improve the accessibility of early detection. With an accurate deep learning model, patients could take pictures of their own skin abnormalities and detect cancer early. We aim to develop a deep learning model that can correctly classify the type of skin cancer a patient has.
 
-- Project learning/experience goals
+### - Project learning/experience goals
 
 We really wanted to get comfortable with working with image data. For this reason, we decided to focus more on making conv2d models, rather than also implementing ML models.
 
-- Data description
+### - Data description
 
 This dataset contains 10015 dermatoscopic images of pigmented lesions for patients in 7 diagnostic categories. For more than half of the subjects, the diagnosis was confirmed through histopathology and for the rest of the patience through follow-up examinations, expert consensus, or by in-vivo confocal microscopy. More information about the dataset and the diagnosis categories, features and patience conditions besides the links to download the dataset can be found on either Harvard Dataverse https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T or on Kaggle https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000/home.
 
@@ -19,7 +19,7 @@ melanoma (MEL),
 melanocytic nevi (NV)
 vascular lesions (angiomas, angiokeratomas, pyogenic granulomas and hemorrhage, VASC).
 
-- Literature Review
+### - Literature Review
 
 In recent times, the major work was carried out on developing models based on CNN variants (ResNet, EfficientNets,
 SENet, so on) for classifying skin lesions using dermoscopic images [1, 2, 3]. They preprocessed the images
@@ -31,7 +31,7 @@ balancing, etc. They used data augmentation, random cropping strategies for tack
 3. Giuseppe Argenziano, HP Soyer, V De Giorgi, Domenico Piccolo, Paolo Carli, and Mario Delfino. Interactive
 atlas of dermoscopy (book and cd-rom). 2000.
 
-- Hypothesis
+### - Hypothesis
 
 From our initial testing, we found that working with this data set was extremely difficult. Because the data is highly imbalance, our models would only predict images as "NV" (the dominant class). Therefore, we set out to improve the performance by changing the data set. We tried making the data set binary, (either "NV" or "Other"), and we tried under sampling the data to fix the imbalance. The binary data did not perform well. The under sampled data on the other hand began to give promising results. After observing the confusion matrix we found that the model was doing well at distinguing classes 2 (NV) and 6 (VASC).
    
